@@ -1,0 +1,106 @@
+/* Center viewport canvas wrapper with deep slate dark background */
+.admin-login-wrapper.dark-theme {
+    background-color: #0f172a; /* Slate 900 matching active borrowers page */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Elevated dynamic dark login container frame */
+.admin-login-container.card-shadow {
+    background: #1e293b; /* Slate 800 */
+    border: 1px solid #334155; /* Slate 700 */
+    padding: 2.5rem;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 420px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+/* Typography Header area spacing layout */
+.login-header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.login-header h2 {
+    color: #f8fafc; /* Slate 50 pure off-white */
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 0 0 0.4rem 0;
+}
+
+.login-header p {
+    color: #94a3b8; /* Slate 400 */
+    font-size: 0.875rem;
+    margin: 0;
+}
+
+/* Individual data entry label/input grouping */
+.form-group {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #cbd5e1; /* Gray 300 text label accessibility visibility */
+}
+
+/* Dark theme form entry element inputs styling mapping */
+.form-group input {
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+    color: #f1f5f9;
+    background-color: #0f172a; /* Slate 900 embedded background fields */
+    border: 1px solid #475569; /* Slate 600 default resting line border */
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Control placeholder styling overrides */
+.form-group input::placeholder {
+    color: #475569;
+}
+
+/* Focus input glow state mapping matching your Sky Blue primary setup */
+.form-group input:focus {
+    border-color: #38bdf8; /* Sky 400 accent marker highlight */
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+}
+
+/* Core submit interaction action button element execution layout */
+.login-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #38bdf8; /* Sky 400 vibrant color button background */
+    color: #0f172a; /* Dark text contrast layout overlay mapping */
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.15s ease, transform 0.1s ease;
+    margin-top: 0.5rem;
+}
+
+/* Interactive pseudo hover state updates */
+.login-btn:hover {
+    background-color: #0ea5e9; /* Sky 500 hover color transformation */
+}
+
+/* Press mechanics micro interaction scale change triggers */
+.login-btn:active {
+    transform: scale(0.98);
+}

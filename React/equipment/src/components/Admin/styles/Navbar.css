@@ -1,0 +1,153 @@
+/* ==========================================================================
+   PREMIUM GLASSMORPHIC NAVIGATION BAR
+   ========================================================================== */
+.admin-navbar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(30, 41, 59, 0.75) !important; /* Semi-transparent Slate 800 */
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(51, 65, 85, 0.5) !important; /* Subtle boundary split line */
+    z-index: 10000; /* Stays reliably on top of table rows and overlays */
+    box-sizing: border-box;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Brand Identity Layouts */
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #f8fafc !important;
+    letter-spacing: -0.025em;
+}
+
+.brand-accent {
+    color: #38bdf8 !important; /* Theme Sky Blue matching your create buttons */
+}
+
+/* Navigation Links Container */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.nav-link {
+    color: #94a3b8 !important; /* Muted standard navigation gray text */
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.5rem 0.85rem;
+    border-radius: 6px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hover Interaction Look */
+.nav-link:hover {
+    color: #f8fafc !important;
+    background-color: rgba(255, 255, 255, 0.03) !important;
+}
+
+/* REACT ROUTER NAVLINK DYNAMIC ACTIVE CLASS TRACKER
+   ========================================================================== */
+.nav-link.active {
+    color: #38bdf8 !important; /* Swaps item text to vibrant sky blue active color tracking */
+    background-color: rgba(56, 189, 248, 0.08) !important; /* Faint glow backdrop frame accent */
+}
+
+/* Integrated Logout Action Button Layout */
+.btn-nav-logout {
+    background: transparent !important;
+    border: 1px solid rgba(248, 113, 113, 0.2) !important;
+    color: #f87171 !important;
+    padding: 0.45rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+    margin-left: 0.5rem;
+}
+
+.btn-nav-logout:hover {
+    background-color: #ef4444 !important;
+    color: #ffffff !important;
+    border-color: #ef4444 !important;
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.2);
+}
+
+/* ==========================================================================
+   MOBILE DROPDOWN DRAWER RESPONSIVENESS (Breakdown layout beneath 960px resolution)
+   ========================================================================== */
+@media (max-width: 960px) {
+    .nav-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 22px;
+        height: 18px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+    }
+
+    .nav-toggle .bar {
+        width: 100%;
+        height: 2px;
+        background-color: #cbd5e1;
+        transition: all 0.25s ease-in-out;
+    }
+
+    /* Transform burger bars into an 'X' icon when open */
+    .nav-toggle .bar.open:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .nav-toggle .bar.open:nth-child(2) { opacity: 0; }
+    .nav-toggle .bar.open:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+    .nav-menu {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #1e293b !important; /* Solid Slate 800 box dropdown backdrop for depth mapping */
+        border-bottom: 1px solid #334155 !important;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 1rem 0;
+        display: none;
+    }
+
+    .nav-menu.is-active {
+        display: flex;
+    }
+
+    .nav-link {
+        padding: 1rem 2rem;
+        border-radius: 0;
+    }
+    
+    .btn-nav-logout {
+        margin: 1rem 2rem 0.5rem 2rem;
+        text-align: center;
+    }
+}
+
+@media (min-width: 961px) {
+    .nav-toggle {
+        display: none;
+    }
+}

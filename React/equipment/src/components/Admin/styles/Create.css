@@ -1,0 +1,194 @@
+/* FORCE global body backgrounds to prevent bleeding white spaces */
+html, body {
+    background-color: #0f172a !important;
+    margin: 0;
+    padding: 0;
+}
+
+/* Center viewport background canvas wrapper */
+.equipment-form-wrapper {
+    background-color: #0f172a !important; /* Slate 900 */
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem 1rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    box-sizing: border-box;
+    position: absolute; /* Ensures complete background takeover */
+    top: 0;
+    left: 0;
+}
+
+/* Elevated dashboard form card layout */
+.equipment-form-card {
+    background: #1e293b !important; /* Slate 800 */
+    width: 100%;
+    max-width: 650px;
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 1px solid #334155; /* Slate 700 */
+}
+
+.card-shadow {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+/* Header typography */
+.equipment-form-card h2 {
+    color: #f8fafc !important; /* Slate 50 off-white */
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 0 0 0.4rem 0;
+}
+
+.form-subtitle {
+    color: #94a3b8 !important; /* Slate 400 */
+    font-size: 0.9rem;
+    margin: 0 0 2rem 0;
+}
+
+/* Responsive grid layout */
+.responsive-form-layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem 1.5rem;
+}
+
+/* Input layout wrappers */
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.full-width {
+    grid-column: span 2;
+}
+
+.form-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #cbd5e1 !important; /* Gray 300 label text */
+    margin-bottom: 0.5rem;
+}
+
+/* Form entry inputs and options field elements styling */
+.form-group input,
+.form-group select {
+    padding: 0.75rem 0.9rem;
+    font-size: 0.95rem;
+    color: #f1f5f9 !important;
+    background-color: #0f172a !important; /* Slate 900 input field bg */
+    border: 1px solid #475569 !important; /* Slate 600 line */
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.form-group input::placeholder {
+    color: #475569 !important;
+}
+
+/* Interactive focus glow styles */
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #38bdf8 !important; /* Sky Blue accent color */
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15) !important;
+}
+
+/* Styled option drops for select boxes to force dark look inside native dropdown menu lists */
+.form-group select option {
+    background-color: #1e293b !important;
+    color: #f1f5f9 !important;
+}
+
+/* Form bottom line divider action strip */
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #334155 !important;
+}
+
+.form-actions button {
+    padding: 0.65rem 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.15s ease, transform 0.1s ease;
+    border: none;
+}
+
+/* Submit core button look */
+.btn-submit {
+    background-color: #38bdf8 !important;
+    color: #0f172a !important;
+}
+
+.btn-submit:hover {
+    background-color: #0ea5e9 !important;
+}
+
+/* Muted dashboard cancel back option */
+.btn-cancel {
+    background-color: #334155 !important;
+    color: #cbd5e1 !important;
+}
+
+.btn-cancel:hover {
+    background-color: #475569 !important;
+    color: #f8fafc !important;
+}
+
+.form-actions button:active {
+    transform: scale(0.98);
+}
+
+/* Animated Loading components styles block */
+.dark-loading-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.dark-loading-container h3 {
+    color: #94a3b8 !important;
+    font-size: 1.05rem;
+    margin: 1.5rem 0 0 0;
+    font-weight: 500;
+}
+
+.dark-spinner {
+    width: 38px;
+    height: 38px;
+    border: 3.5px solid #334155 !important;
+    border-top: 3.5px solid #38bdf8 !important;
+    border-radius: 50%;
+    animation: assetFormSpin 0.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes assetFormSpin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Mobile responsive collapse breakpoints */
+@media (max-width: 600px) {
+    .responsive-form-layout {
+        grid-template-columns: 1fr;
+    }
+    .full-width {
+        grid-column: span 1;
+    }
+    .equipment-form-card {
+        padding: 1.5rem;
+    }
+}

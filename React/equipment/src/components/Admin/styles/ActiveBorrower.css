@@ -1,0 +1,154 @@
+/* Viewport wrapper with deep slate background dark styling */
+.dark-theme-wrapper {
+    background-color: #0f172a; /* Slate 900 dark theme */
+    min-height: 100vh;
+    padding: 2.5rem 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Master container card with complex dark shadow drop */
+.borrower-card-container {
+    background: #1e293b; /* Slate 800 */
+    width: 100%;
+    max-width: 950px;
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 1px solid #334155; /* Slate 700 subtle border */
+}
+
+/* Custom premium ambient shadow logic */
+.shadow-look {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -4px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* Header typography */
+.borrower-header {
+    margin-bottom: 2rem;
+}
+
+.borrower-header h2 {
+    color: #f8fafc; /* White/Slate 50 */
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 0 0 0.4rem 0;
+}
+
+.borrower-header p {
+    color: #94a3b8; /* Slate 400 Muted text */
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Table Responsive Scrolling Wrapper */
+.table-responsive-wrapper {
+    overflow-x: auto;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #334155;
+}
+
+/* Custom layout dark table schema rules */
+.dark-custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.95rem;
+    background-color: #1e293b;
+}
+
+.dark-custom-table th {
+    background-color: #111827; /* Dark charcoal header strip */
+    color: #cbd5e1; /* Gray 300 */
+    font-weight: 600;
+    padding: 1rem 1.25rem;
+    border-bottom: 2px solid #334155;
+    letter-spacing: 0.03em;
+}
+
+.dark-custom-table td {
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid #334155;
+    color: #e2e8f0;
+    vertical-align: middle;
+}
+
+/* Table row alternating stripe patterns and interactive hovering states */
+.dark-custom-table tbody tr:nth-child(even) {
+    background-color: #1a2232;
+}
+
+.dark-custom-table tbody tr:hover {
+    background-color: #243249;
+    transition: background-color 0.15s ease-in-out;
+}
+
+/* Column Specific Variations */
+.index-column {
+    color: #64748b; /* Muted gray for row indexes */
+    font-weight: 500;
+}
+
+.highlight-text {
+    color: #38bdf8; /* Vibrant Sky Blue hue text accent */
+    font-weight: 600;
+}
+
+.muted-text {
+    color: #94a3b8;
+}
+
+/* Empty data state layout */
+.no-data-fallback {
+    color: #64748b;
+    text-align: center;
+    padding: 3.5rem !important;
+    font-style: italic;
+    font-size: 1rem;
+}
+
+/* Loading Layout Schema States */
+.dark-loading-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+    text-align: center;
+}
+
+.dark-loading-container h3 {
+    color: #94a3b8;
+    font-size: 1.1rem;
+    margin: 1.5rem 0 0 0;
+    font-weight: 500;
+}
+
+.dark-spinner {
+    width: 42px;
+    height: 42px;
+    border: 3.5px solid #334155;
+    border-top: 3.5px solid #38bdf8; /* Blue accent spin path */
+    border-radius: 50%;
+    animation: darkSpin 0.85s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes darkSpin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Mobile Responsiveness Adjustment overrides */
+@media (max-width: 640px) {
+    .borrower-card-container {
+        padding: 1.5rem;
+    }
+    .dark-custom-table th, 
+    .dark-custom-table td {
+        padding: 0.75rem 1rem;
+        font-size: 0.85rem;
+    }
+}

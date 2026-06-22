@@ -1,0 +1,202 @@
+/* ==========================================================================
+   MY ACTIVE BORROWINGS - SEPARATE STYLESHEET
+   ========================================================================== */
+
+/* Page layout container canvas */
+.equipment-wrapper {
+    padding: 2rem;
+    background-color: #0f172a !important; /* Deep Slate 900 Canvas */
+    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: flex-start;
+}
+
+/* Elevated glass card frame matrix */
+.equipment-card {
+    background: #1e293b !important; /* Slate 800 Card Base */
+    border-radius: 12px;
+    padding: 2rem;
+    border: 1px solid #334155 !important; /* Slate 700 Border */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+}
+
+/* Header Text Layout */
+.equipment-header h2 {
+    color: #f8fafc !important; /* Pure Slate White Title */
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 0 0 0.25rem 0;
+}
+
+.equipment-header p {
+    color: #94a3b8 !important; /* Muted Slate Description Subtitle */
+    font-size: 0.95rem;
+    margin: 0 0 2rem 0;
+}
+
+/* ==========================================================================
+   DATA TABLE ENGINE
+   ========================================================================== */
+
+/* Prevents table blowout layout horizontal breaks on tablet/mobile screens */
+.table-responsive {
+    overflow-x: auto;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #334155 !important;
+    background-color: #111827 !important; /* Deep Jet Dark Matrix Base */
+}
+
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.95rem;
+    white-space: nowrap;
+}
+
+.custom-table th {
+    background-color: #111827 !important;
+    color: #cbd5e1 !important; /* Clear Light Slate Gray label text */
+    font-weight: 600;
+    padding: 1rem;
+    border-bottom: 2px solid #334155 !important;
+    letter-spacing: 0.02em;
+}
+
+/* Zebra row formatting to block out white layout leaks */
+.custom-table tbody tr {
+    background-color: #1e293b !important; /* Odd Rows Dark Slate */
+}
+
+.custom-table tbody tr:nth-child(even) {
+    background-color: #161e2e !important; /* Even Rows Muted Slate Dark */
+}
+
+.custom-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #334155 !important;
+    color: #cbd5e1 !important;
+    vertical-align: middle;
+    background: transparent !important; 
+}
+
+/* Row interaction background highlight */
+.custom-table tbody tr:hover,
+.custom-table tbody tr:hover td {
+    background-color: #243249 !important;
+    transition: background-color 0.15s ease-in-out;
+}
+
+/* Typography Utility Modifiers */
+.fw-semibold {
+    font-weight: 600;
+    color: #f8fafc !important;
+}
+
+.text-muted {
+    color: #64748b !important;
+}
+
+/* Empty log state feedback wrapper padding styles */
+.no-data {
+    color: #64748b !important;
+    padding: 3rem !important;
+    font-style: italic;
+    text-align: center;
+}
+
+/* ==========================================================================
+   PILL BADGES & CONTROL ACTIONS
+   ========================================================================== */
+
+/* Borrowed yellow tracking status badge indicator */
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-sizing: border-box;
+}
+
+.status-warn {
+    background-color: rgba(245, 158, 11, 0.12) !important;
+    color: #fbbf24 !important; /* Amber Yellow Warning Warning */
+    border: 1px solid rgba(245, 158, 11, 0.25) !important;
+}
+
+/* Transparent emerald green execution interactive trigger click action */
+.btn-action.btn-return {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    border-radius: 6px;
+    box-sizing: border-box;
+    background-color: transparent !important;
+    color: #34d399 !important; 
+    border: 1px solid rgba(52, 211, 153, 0.2) !important;
+    padding: 0.4rem 1rem;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-return:hover {
+    background-color: #10b981 !important; /* Solid mint green on engagement */
+    color: #0f172a !important; /* High contrast inverse text */
+    border-color: #10b981 !important;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.25);
+}
+
+.btn-return:active {
+    transform: scale(0.95);
+}
+
+/* ==========================================================================
+   LOADING FALLBACK ASYNC SPINNER 
+   ========================================================================== */
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    background-color: #0f172a;
+}
+
+.loading-container h3 {
+    color: #94a3b8 !important;
+    font-size: 1.05rem;
+    margin: 0;
+    font-weight: 500;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 3.5px solid #334155 !important;
+    border-top: 3.5px solid #38bdf8 !important; /* Modern Sky Blue accent indicator loader spin wheel */
+    border-radius: 50%;
+    animation: spin 0.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    margin-bottom: 1.25rem;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

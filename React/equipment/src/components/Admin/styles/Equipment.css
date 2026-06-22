@@ -1,0 +1,146 @@
+/* Center wrapper layout */
+.equipment-form-wrapper {
+    background-color: #f8fafc;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem 1rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Card container with a soft elevation shadow drop */
+.equipment-form-card {
+    background: #ffffff;
+    width: 100%;
+    max-width: 650px;
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 20px 25px -5px rgba(0, 0, 0, 0.06);
+}
+
+.equipment-form-card h2 {
+    color: #1e293b;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 0 0 0.35rem 0;
+}
+
+.form-subtitle {
+    color: #64748b;
+    font-size: 0.9rem;
+    margin: 0 0 2rem 0;
+}
+
+/* Two column responsive grid layout */
+.responsive-form-layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem 1.5rem;
+}
+
+/* Structural groups */
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Class modifier to make fields span full-width */
+.full-width {
+    grid-column: span 2;
+}
+
+.form-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #475569;
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+}
+
+/* Style Inputs and Select menus identically */
+.form-group input,
+.form-group select {
+    padding: 0.7rem 0.9rem;
+    font-size: 0.95rem;
+    color: #334155;
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    outline: none;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* Blue Focus highlights */
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+/* Bottom Actions container */
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #f1f5f9;
+}
+
+.form-actions button {
+    padding: 0.65rem 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    border: none;
+}
+
+/* Blue Submit button */
+.btn-submit {
+    background-color: #3b82f6;
+    color: white;
+}
+
+.btn-submit:hover {
+    background-color: #2563eb;
+}
+
+/* Cancel back button alternative look */
+.btn-cancel {
+    background-color: #f1f5f9;
+    color: #475569;
+}
+
+.btn-cancel:hover {
+    background-color: #e2e8f0;
+    color: #1e293b;
+}
+
+.form-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    font-size: 1.2rem;
+    color: #64748b;
+}
+
+/* Fallback collapse to a single stack for narrow phone screens */
+@media (max-width: 600px) {
+    .responsive-form-layout {
+        grid-template-columns: 1fr;
+    }
+    .full-width {
+        grid-column: span 1;
+    }
+    .equipment-form-card {
+        padding: 1.5rem;
+    }
+}

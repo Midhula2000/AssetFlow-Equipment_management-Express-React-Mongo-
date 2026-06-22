@@ -1,0 +1,143 @@
+/* Core viewport dark theme container */
+.dashboard-container {
+    background-color: #0f172a; /* Slate 900 */
+    min-height: 100vh;
+    padding: 3rem 2rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Header Text Blocks styling */
+.dashboard-header-block {
+    max-width: 1200px;
+    margin: 0 auto 2.5rem auto;
+}
+
+.dashboard-title {
+    color: #f8fafc; /* Slate 50 pure text white */
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 0 0 0.5rem 0;
+    letter-spacing: -0.025em;
+}
+
+.dashboard-subtitle {
+    color: #94a3b8; /* Slate 400 */
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Flexible Dashboard Layout Grid matrix system */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Base structural card links reset */
+.card-wrapper-link {
+    display: block;
+    color: inherit;
+}
+
+/* Elevated dashboard card styles modules */
+.dashboard-card {
+    background: #1e293b; /* Slate 800 */
+    border: 1px solid #334155; /* Slate 700 standard frame border */
+    padding: 2rem 1.75rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.2s ease;
+    cursor: pointer;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Card transform hover reactive scaling metrics */
+.dashboard-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+/* Inner component details styles architecture */
+.dashboard-card h3 {
+    color: #94a3b8; /* Slate 400 metric name text layer label */
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: 0 0 1.5rem 0;
+    letter-spacing: 0.025em;
+    text-transform: uppercase;
+}
+
+/* Large dashboard indicator numbers */
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 0;
+    line-height: 1;
+    letter-spacing: -0.03em;
+}
+
+/* Color Accent System Themes mappings */
+.border-blue:hover { border-color: #3b82f6; }
+.color-blue { color: #3b82f6; } /* Blue 500 */
+
+.border-sky:hover { border-color: #38bdf8; }
+.color-sky { color: #38bdf8; }   /* Sky 400 */
+
+.border-purple:hover { border-color: #a855f7; }
+.color-purple { color: #a855f7; } /* Purple 500 */
+
+.border-amber:hover { border-color: #f59e0b; }
+.color-amber { color: #f59e0b; }   /* Amber 500 */
+
+.border-emerald:hover { border-color: #10b981; }
+.color-emerald { color: #10b981; } /* Emerald 500 */
+
+/* Loading layout state components structural definitions */
+.dark-loading-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+}
+
+.dark-loading-container h3 {
+    color: #64748b;
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+    font-weight: 500;
+}
+
+.dark-spinner {
+    width: 42px;
+    height: 42px;
+    border: 4px solid #334155;
+    border-top: 4px solid #38bdf8; /* Sky Blue accent loader token ring */
+    border-radius: 50%;
+    animation: dashBoardLoadingSpin 0.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes dashBoardLoadingSpin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Custom layout structural breakpoint changes logic */
+@media (max-width: 640px) {
+    .dashboard-container {
+        padding: 2rem 1rem;
+    }
+    .dashboard-title {
+        font-size: 1.6rem;
+    }
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}

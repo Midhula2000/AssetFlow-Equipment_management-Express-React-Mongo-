@@ -1,0 +1,192 @@
+/* Core background dark theme canvas matching dashboard setup */
+.dark-theme-wrapper {
+    background-color: #0f172a; /* Slate 900 */
+    min-height: 100vh;
+    padding: 2.5rem 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Elevated container card style blueprint */
+.returned-card-container {
+    background: #1e293b; /* Slate 800 */
+    border: 1px solid #334155; /* Slate 700 */
+    width: 100%;
+    max-width: 1280px;
+    padding: 2.5rem;
+    border-radius: 12px;
+}
+
+.card-shadow {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -4px rgba(0, 0, 0, 0.3);
+}
+
+/* Top header row alignment matrix elements */
+.returned-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+
+.header-text-block h2 {
+    color: #f8fafc; /* Pure slate white display text */
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 0 0 0.4rem 0;
+}
+
+.header-text-block p {
+    color: #94a3b8; /* Slate 400 */
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Distinct emerald green counter total indicator badge */
+.total-badge-success {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: #10b981; /* Emerald 500 */
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* Table scroll area grid containment strategy */
+.table-scroll-area {
+    overflow-x: auto;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #334155;
+    background-color: #111827; /* Dark table core block color */
+}
+
+/* Custom dark table elements structural properties layout mapping */
+.returned-dark-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.returned-dark-table th {
+    background-color: #111827;
+    color: #cbd5e1; /* Gray 300 headers text color scale variables */
+    font-weight: 600;
+    padding: 1rem 1.25rem;
+    border-bottom: 2px solid #334155;
+    letter-spacing: 0.02em;
+}
+
+.returned-dark-table td {
+    padding: 0.95rem 1.25rem;
+    border-bottom: 1px solid #334155;
+    color: #cbd5e1;
+    vertical-align: middle;
+}
+
+/* Interchanging row striping schema */
+.returned-dark-table tbody tr {
+    background-color: #1e293b;
+}
+
+.returned-dark-table tbody tr:nth-child(even) {
+    background-color: #161e2e;
+}
+
+.returned-dark-table tbody tr:hover {
+    background-color: #243249;
+    transition: background-color 0.1s ease-in-out;
+}
+
+/* Typography elements color mapping accents identifiers */
+.text-center { text-align: center !important; }
+.highlight-text { color: #f8fafc; font-weight: 600; }
+.slate-light-text { color: #94a3b8; }
+.equipment-name-cell { color: #38bdf8; font-weight: 500; } /* Blue tint highlights asset tracking titles */
+.bold-qty { font-weight: 700; color: #f8fafc; }
+.date-cell { color: #cbd5e1; font-variant-numeric: tabular-nums; }
+.return-date-highlight { color: #34d399; font-weight: 500; } /* Mint text indicating successful processing */
+
+/* Minor asset type label wrapper tags styling */
+.category-inline-tag {
+    background-color: #334155;
+    color: #e2e8f0;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* Premium success return pill configuration blueprint */
+.status-pill-success {
+    display: inline-block;
+    background-color: rgba(52, 211, 153, 0.12); /* Translucent soft emerald */
+    color: #34d399; /* Clear mint green success textual state indicator */
+    border: 1px solid rgba(52, 211, 153, 0.25);
+    padding: 0.25rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+/* Fallback fallback block configuration style properties layout rules */
+.empty-table-fallback {
+    color: #64748b;
+    text-align: center;
+    padding: 4rem !important;
+    font-style: italic;
+    font-size: 0.95rem;
+}
+
+/* Infinite loader structure */
+.dark-loading-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+}
+
+.dark-loading-container h3 {
+    color: #94a3b8;
+    font-size: 1.05rem;
+    margin: 1.5rem 0 0 0;
+    font-weight: 500;
+}
+
+.dark-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3.5px solid #334155;
+    border-top: 3.5px solid #10b981; /* Emerald loader accent spinner color */
+    border-radius: 50%;
+    animation: returnSpin 0.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes returnSpin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Screen width layout reduction changes */
+@media (max-width: 768px) {
+    .returned-card-container {
+        padding: 1.5rem;
+    }
+    .returned-header-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .total-badge-success {
+        align-self: flex-start;
+    }
+}

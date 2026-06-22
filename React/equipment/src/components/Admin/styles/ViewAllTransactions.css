@@ -1,0 +1,28 @@
+/* ==========================================================================
+   TRANSACTION LEDGER EXTENSIONS
+   ========================================================================== */
+
+/* High contrast bold text layout identifier utilities */
+.fw-semibold {
+    font-weight: 600;
+    color: #f8fafc !important;
+}
+
+/* Light sky blue variant tracking text highlight colors */
+.text-sky {
+    color: #38bdf8 !important;
+}
+
+/* Base configuration update to ensure status-badge works beautifully inside table cells */
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-sizing: border-box;
+}

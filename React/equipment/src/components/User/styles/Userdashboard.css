@@ -1,0 +1,227 @@
+/* Container layout styling */
+.equipment-wrapper {
+    padding: 2rem;
+    background-color: #f8fafc;
+    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Standard Box Shadow Card Look */
+.equipment-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e2e8f0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header tweaks */
+.equipment-header h2 {
+    color: #1e293b;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 0 0 0.25rem 0;
+}
+
+.equipment-header p {
+    color: #64748b;
+    font-size: 0.95rem;
+    margin: 0 0 2rem 0;
+}
+
+/* Prevents table blowout on mobile views */
+.table-responsive {
+    overflow-x: auto;
+    width: 100%;
+}
+
+/* Standard modern look table structure */
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+.custom-table th {
+    background-color: #f1f5f9;
+    color: #475569;
+    font-weight: 600;
+    padding: 1rem;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.custom-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #edf2f7;
+    color: #334155;
+    vertical-align: middle;
+}
+
+/* Hover effects and subtle stripes */
+.custom-table tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+
+.custom-table tbody tr:hover {
+    background-color: #f1f5f9;
+    transition: background-color 0.2s ease;
+}
+
+/* Pill status Badges */
+.status-badge {
+    display: inline-block;
+    padding: 0.35rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.status-good {
+    background-color: #dcfce7;
+    color: #15803d;
+}
+
+.status-warn {
+    background-color: #fef3c7;
+    color: #b45309;
+}
+
+/* Fallback message padding */
+.no-data {
+    color: #94a3b8;
+    padding: 3rem !important;
+    font-style: italic;
+}
+
+/* Center loading fallback */
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    color: #64748b;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid #e2e8f0;
+    border-top: 3px solid #3b82f6;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background: rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 999;
+}
+
+.borrow-modal {
+   background-color: rgba(56, 189, 248, 0.06) !important; /* Translucent Sky Blue backdrop */
+    padding: 20px;
+    border-radius: 10px;
+    width: 450px;
+     color: #38bdf8 !important; /* Premium Sky Blue text tint */
+}
+
+.borrow-modal h3 {
+    margin-bottom: 15px;
+}
+
+.borrow-modal label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.borrow-modal input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 10px;
+    
+}
+
+.modal-buttons button {
+    padding: 8px 16px;
+    cursor: pointer;
+    background-color: rgba(56, 189, 248, 0.06) !important; /* Translucent Sky Blue backdrop */
+    padding: 20px;
+    border-radius: 10px;
+    width: 450px;
+     color: #38bdf8 !important; /* Premium Sky Blue text tint */
+}
+
+.modal-buttons button:hover {
+     background-color: #38bdf8 !important; /* Fills completely with primary accent blue */
+    color: #0f172a !important; /* Flips text dark for pristine high-contrast reading */
+    border-color: #38bdf8 !important;
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.35); /* Elegant outer neon aura glow */
+    transform: translateY(-1px); /* Micro-interaction lift */
+}
+
+.btn-borrow{
+     background-color: rgba(56, 189, 248, 0.06) !important; /* Translucent Sky Blue backdrop */
+    color: #38bdf8 !important; /* Premium Sky Blue text tint */
+    border: 1px solid rgba(56, 189, 248, 0.25) !important; /* Subdued neon accent outline */
+    margin-top: 10px;
+}
+
+.action-row-container {
+    width: 100%;
+    max-width: 1200px;         /* Matches your card's max-width constraint */
+    margin: 0 auto;            /* Centers the boundary container on the page */
+    display: flex;
+    justify-content: flex-end; /* Slams the inner button to the far left wall */
+    padding-bottom: 1rem;      /* Buffer zone between button and card */
+}
+.btn-active-borrowings{
+
+
+    margin-bottom: 10px;
+    background-color: rgba(56, 189, 248, 0.06) !important; /* Translucent Sky Blue backdrop */
+    color: #38bdf8 !important; /* Premium Sky Blue text tint */
+    border: 1px solid rgba(56, 189, 248, 0.25) !important; /* Subdued neon accent outline */
+    
+    /* Center text inside the button */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Presentation details */
+    padding: 0.6rem 1.35rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
